@@ -1,0 +1,21 @@
+body{
+
+background-color: bisque;
+margin: 20px;
+
+}
+
+.header{
+
+text-align:center
+}
+
+.footer{
+
+    background-color: rgb(240, 217, 10);
+    text-align: center;
+}
+
+
+
+

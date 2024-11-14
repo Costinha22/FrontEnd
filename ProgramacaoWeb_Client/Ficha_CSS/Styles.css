@@ -1,0 +1,73 @@
+body{
+
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    background-image: url(nuvens.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: 1366px;
+    
+
+
+    text-align: center;
+}
+.alinhaEsquerda{
+    text-align: left;
+}
+.alinhaDireita{
+    text-align: right;
+}
+h1,h2,h3,p{
+text-align: center;
+}
+
+.vermelho{
+    color:red;
+    background-color: lightseagreen;
+    border: 2px solid pink;
+    
+
+}
+.azul{
+    color: blue;
+}
+
+.verde{
+    color: green;
+}
+
+
+
+.butao{
+
+    color: greenyellow;
+    background-color: blue;
+    border: 2px;
+    margin: auto;
+    padding: auto;
+
+       
+}
+
+.cinzento{
+
+    background-color: aquamarine;
+    
+}
+
+.metade{
+
+    background-color: bisque;
+    width: 50%;
+}
+
+
+
+p{
+
+    border-style: dotted dashed solid double;
+   
+
+}
