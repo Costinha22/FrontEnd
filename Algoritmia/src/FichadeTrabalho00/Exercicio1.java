@@ -1,3 +1,5 @@
+package FichadeTrabalho00;
+
 import java.util.Scanner;
 
 public class Exercicio1 {
