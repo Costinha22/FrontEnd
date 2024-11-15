@@ -1,24 +1,5 @@
-*{
-margin: 0;
-padding: 0;
+.container{
+    background-color: rgb(45, 14, 223);
+    border-radius: 100%;
+    font-size: xx-large;
 }
-
-a: hover{
-    opacity: 0.5
-}
-
-.logo{
-font-size: 20px;
-text-transform: uppercase;
-letter-spacing: 4px;
-}
-
-nav {
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: azure;
-}
-
