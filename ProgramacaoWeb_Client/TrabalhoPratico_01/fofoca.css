@@ -1,104 +1,102 @@
-
-
+/* Organiza o conteúdo principal da página em coluna, garantindo que ocupe toda a altura da janela */
 .body {
-  display: flex;
-  flex-direction: column;   /* Organiza o conteúdo da página em coluna */
-  min-height: 100vh;         /* Garante que o corpo tenha ao menos a altura total da tela */
-  margin: 0;                 /* Remove qualquer margem do corpo */
+  display: flex; /* Utiliza o modelo Flexbox para gerir o layout da página */
+  flex-direction: column; /* Define a orientação dos elementos em coluna */
+  min-height: 100vh; /* Garante que o conteúdo ocupa, no mínimo, 100% da altura da janela */
+  margin: 0; /* Remove margens externas padrão da página */
 }
 
-
-
-/* Estilo geral para o elemento <main> */
+/* Estilização geral para a área principal do conteúdo (main) */
 main {
-  margin-top: 125px;  /* Adiciona uma margem no topo de 125px (separa o conteúdo do topo da página) */
-  text-align: center; /* Centraliza o texto dentro do elemento <main> */
+  margin-top: 125px; /* Adiciona espaço no topo, abaixo de outros elementos (ex.: header) */
+  text-align: center; /* Centraliza o texto do conteúdo principal */
 }
 
-/* Estilo para as imagens com a classe .img1 */
+/* Define o tamanho para as imagens com a classe .img1 */
 .img1 {
-  width: 500px;  /* Define a largura da imagem como 500 pixels */
-  height: 325px; /* Define a altura da imagem como 325 pixels */
+  width: 500px; /* Define a largura fixa da imagem */
+  height: 325px; /* Define a altura fixa da imagem */
+  /* Nota: A propriedade "height" cortará a imagem se o tamanho não for proporcional */
 }
 
-/* Estilo para a primeira linha de containers (rowcontainer1) */
+/* Configura o layout da primeira linha de containers (rowcontainer1) */
 .rowcontainer1 {
-  display: flex; /* Usa Flexbox para alinhar os elementos filhos em linha */
-  justify-content: space-between; /* Espaça os itens igualmente ao longo da linha, deixando espaço entre eles */
-  gap: 20px; /* Adiciona 20px de espaço entre os itens na linha */
+  display: flex; /* Aplica o modelo Flexbox para organizar os itens numa linha */
+  justify-content: space-between; /* Espaça os itens igualmente, deixando espaço nos extremos */
+  gap: 20px; /* Adiciona um espaçamento de 20px entre os itens */
 }
 
-/* Estilo para os itens dentro de .rowcontainer1, com a classe .new1 */
+/* Estilo para os elementos dentro de .rowcontainer1 com a classe .new1 */
 .new1 {
-  border: 4px solid black; /* Adiciona uma borda preta de 4px de espessura ao redor do item */
-  padding: 10px; /* Adiciona um espaçamento interno de 10px em todos os lados do item */
-  background-color: khaki; /* Define a cor de fundo como khaki (amarelo claro) */
-  width: 50%; /* Define a largura do item como 50% do tamanho do seu container pai */
-  object-fit: fill; /* Faz a imagem ou conteúdo do item preencher completamente o espaço (ignora a proporção) */
+  border: 4px solid black; /* Adiciona uma borda preta com 4px de espessura ao redor do elemento */
+  padding: 10px; /* Adiciona espaçamento interno de 10px em todos os lados */
+  background-color: khaki; /* Define uma cor de fundo amarelo claro */
+  width: 50%; /* Define a largura do elemento como metade do container pai */
+  object-fit: fill; /* Preenche completamente o espaço, ignorando a proporção do conteúdo */
 }
 
-/* Estilo para a segunda linha de containers (rowcontainer2) */
+/* Configura o layout da segunda linha de containers (rowcontainer2) */
 .rowcontainer2 {
-  display: flex; /* Usa Flexbox para alinhar os elementos filhos em linha */
-  justify-content: space-between; /* Espaça os itens igualmente ao longo da linha */
-  gap: 20px; /* Adiciona 20px de espaço entre os itens na linha */
+  display: flex; /* Organiza os elementos numa linha com Flexbox */
+  justify-content: space-between; /* Distribui os itens igualmente com espaço entre eles */
+  gap: 20px; /* Adiciona um espaço fixo de 20px entre os itens */
 }
 
-/* Estilo para os itens dentro de .rowcontainer2, com a classe .news-item */
+/* Estilo para os elementos de notícias com a classe .news-item */
 .news-item {
-  background-color: #fff; /* Define a cor de fundo como branca */
-  padding: 20px; /* Adiciona um espaçamento interno de 20px em todos os lados do item */
-  border-radius: 8px; /* Arredonda os cantos do item com um raio de 8px */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave em torno do item */
-  margin-bottom: 30px; /* Adiciona uma margem de 30px na parte inferior do item (cria espaço entre os itens) */
+  background-color: #fff; /* Define uma cor de fundo branca */
+  padding: 20px; /* Adiciona um espaçamento interno de 20px em todos os lados */
+  border-radius: 8px; /* Arredonda os cantos com um raio de 8px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra subtil ao redor do elemento */
+  margin-bottom: 30px; /* Adiciona um espaço de 30px na parte inferior do item */
 }
+
+/* Estilo para os títulos das notícias */
 .news-title {
-  /* estilizar os titulos das noticias */
-  font-size: 28px;
-  color: #2c3e50;
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-  text-align: center;
+  font-size: 28px; /* Define o tamanho do texto dos títulos */
+  color: #2c3e50; /* Define uma cor de texto escura (cinza-azulado) */
+  margin-bottom: 15px; /* Adiciona um espaço de 15px abaixo do título */
+  font-weight: bold; /* Torna o texto em negrito */
+  text-transform: uppercase; /* Converte o texto para letras maiúsculas */
+  letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
+  transition: color 0.3s ease; /* Suaviza a transição da cor ao passar o rato por cima */
+  text-align: center; /* Centraliza o texto do título */
 }
 
-/* Estilo para o efeito de hover nos links de navegação */
+/* Efeito de hover para os links de navegação */
 .nav-link:hover {
-  color: aqua;                /* Altera a cor do texto para aqua (azul claro) quando o mouse passa por cima */
-  background-color: blue;     /* Altera o fundo do link para azul quando o rato passa por cima */
+  color: aqua; /* Altera a cor do texto para azul claro quando o rato passa por cima */
+  background-color: blue; /* Altera o fundo para azul durante o hover */
 }
 
-/* Estilo para os textos dentro de elementos com a classe .news-text */
+/* Justifica o texto dentro de elementos com a classe .news-text */
 .news-text {
-  text-align: justify;        /* Justifica o texto, ou seja, distribui o texto de forma que as linhas preencham toda a largura do container */
+  text-align: justify; /* Distribui o texto para preencher toda a largura disponível */
 }
 
-/* Estilo para os itens de notícias com a classe .news-item */
+/* Ajustes adicionais para o conteúdo das notícias */
 .news-item {
-  text-align: left;           /* Alinha o texto à esquerda dentro dos elementos com a classe .news-item */
-  padding-left: 1;            /* Adiciona um pequeno espaçamento à esquerda do conteúdo dentro do .news-item (o valor '1' provavelmente é um erro e deveria ser uma unidade como px ou em) */
+  text-align: left; /* Alinha o texto à esquerda */
+  padding-left: 1px; /* Adiciona um pequeno espaçamento à esquerda (corrigido para px) */
 }
 
-/* Estilo para os <div> dentro de .news-item */
+/* Centraliza elementos dentro de <div> dentro de .news-item */
 .news-item div {
-  display: flex;              /* Aplica o modelo de layout Flexbox aos elementos <div> dentro de .news-item */
-  justify-content: center;    /* Alinha os elementos filhos (dentro do <div>) horizontalmente no centro */
+  display: flex; /* Aplica o modelo Flexbox */
+  justify-content: center; /* Centraliza os elementos filhos horizontalmente */
 }
 
-/* Estilo para os <div> dentro de .news-item1 */
+/* Mesma estilização, mas para .news-item1 */
 .news-item1 div {
-  display: flex;              /* Aplica o modelo de layout Flexbox aos elementos <div> dentro de .news-item1 */
-  justify-content: center;    /* Alinha os elementos filhos (dentro do <div>) horizontalmente no centro */
+  display: flex; /* Aplica o modelo Flexbox */
+  justify-content: center; /* Centraliza horizontalmente os filhos */
 }
 
 /* Estilo para as imagens dentro de .news-item */
 .news-item img {
-  display: block;             /* Faz a imagem se comportar como um bloco, permitindo o uso de margens */
-  margin: 0 auto;             /* Centraliza a imagem horizontalmente dentro do seu container */
-  width: 100%;                /* Ajusta a largura da imagem para ocupar 100% da largura do container pai */
-  max-width: 600px;           /* Define um limite máximo de largura para a imagem, evitando que ela cresça além de 600px */
-  height: auto;               /* Mantém a proporção da imagem ao ajustar a largura, sem distorcer a imagem */
+  display: block; /* Garante que a imagem seja tratada como um elemento de bloco */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+  width: 100%; /* Ajusta a largura da imagem para preencher o container */
+  max-width: 600px; /* Define a largura máxima da imagem */
 }
 
