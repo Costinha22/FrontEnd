@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Graphic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px auto;
+            transition: all 0.5s ease;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .animate {
+            animation: moveBox 2s infinite alternate;
+        }
+
+        @keyframes moveBox {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(150px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Learn JavaScript Interactivity</h1>
+
+        <!-- Buttons to trigger JavaScript actions -->
+        <button id="changeColorBtn">Change Color</button>
+        <button id="animateBoxBtn">Animate Box</button>
+        <button id="resetBtn">Reset</button>
+
+        <!-- The box that will change color or animate -->
+        <div id="box" class="box"></div>
+
+        <p>Click the buttons to see JavaScript in action!</p>
+    </div>
+
+    <script>
+        // Getting elements from HTML
+        const changeColorBtn = document.getElementById('changeColorBtn');
+        const animateBoxBtn = document.getElementById('animateBoxBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const box = document.getElementById('box');
+
+        // Change the color of the box
+        changeColorBtn.addEventListener('click', () => {
+            box.style.backgroundColor = 'lightcoral';  // Change color
+            changeColorBtn.classList.add('active'); // Add active class to style the button
+            resetBtn.classList.remove('active');
+        });
+
+        // Animate the box
+        animateBoxBtn.addEventListener('click', () => {
+            box.classList.add('animate'); // Add animation class
+            animateBoxBtn.classList.add('active');
+            resetBtn.classList.remove('active');
+        });
+
+        // Reset all actions
+        resetBtn.addEventListener('click', () => {
+            box.style.backgroundColor = 'lightblue';  // Reset color
+            box.classList.remove('animate'); // Remove animation
+            changeColorBtn.classList.remove('active');
+            animateBoxBtn.classList.remove('active');
+        });
+    </script>
+
+</body>
+
+</html>
