@@ -11,18 +11,20 @@ public class Exercicio09 {
         //matriz de 5*5
 
         int [][] matriz = new int[5][5];
-        int soma;
+        int soma = 0;
 
-        for (int linha = 0; linha < 5; linha++) {
 
-            for (int coluna = 0; coluna < 5; coluna++) {
-                System.out.println("Insira um valor[" + linha + "]" + "[" + coluna + "]");
-                matriz[linha][coluna] = input.nextInt();
+
+            for (int linha = 0; matriz.length< 5; linha++) {
+                for(int colunas = 0; colunas < matriz.length;colunas++){
+
+                    System.out.println("Insira um valor[" + linha + "]" + "[" + colunas+ "]");
+                matriz[linha][linha] = input.nextInt();
+                soma += matriz[linha][colunas];
 
 
             }
-            soma = matriz [0][0];
-            for(int )
+                System.out.println("A soma total é =" + soma);
         }
     }
 }
