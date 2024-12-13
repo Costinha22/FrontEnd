@@ -17,3 +17,9 @@ let texto2 = texto.toLowerCase()
 
 console.log(texto1)
 console.log(texto2)
+
+//Exercicio4
+
+let java = "Eu adoro programar em java!"
+let index = java.replace("java, javascript")
+console.log(index)
