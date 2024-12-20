@@ -44,8 +44,8 @@ public class Exercicio06 {
 
 
             }
-                scanner.close();
-        System.out.print("A pessoa mais velha é: " + nomeIdade + " com " + maiorIdade + " anos. ");
 
+        System.out.print("A pessoa mais velha é: " + nomeIdade + " com " + maiorIdade + " anos. ");
+        scanner.close();
         }
     }

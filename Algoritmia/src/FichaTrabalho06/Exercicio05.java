@@ -27,7 +27,7 @@ public class Exercicio05 {
         }
         System.out.println("A soma dos números é: " +soma);
 
-
+        scanner.close();
 
     }
 

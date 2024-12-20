@@ -29,12 +29,13 @@ public class Exercicio07 {
         }
 
 
-        // Fecha o scanner
-        scanner.close();
+
 
         // Exibe o número de linhas e palavras
         System.out.println("Número de linhas: " + numeroDeLinhas);
         System.out.println("Número de palavras: " + numeroDePalavras);
+        // Fecha o scanner
+        scanner.close();
     }
 }
 

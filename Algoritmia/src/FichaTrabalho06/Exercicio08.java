@@ -33,10 +33,13 @@ public class Exercicio08 {
             }
         }
 
+
+
+        System.out.println("Frases repetidas copiadas para o arquivo de resultado.");
+
         scannerEntrada.close();
         escritor.close();
 
-        System.out.println("Frases repetidas copiadas para o arquivo de resultado.");
     }
 }
 
