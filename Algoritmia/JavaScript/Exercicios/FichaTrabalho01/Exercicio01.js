@@ -89,17 +89,43 @@ console.log (product.colors[2])
 
 //Novo valor
 product.price = 2.55
-*/
+
 
 //Ciclos
 
 
-for (let letra = 0; letra <= 26; letra++) {
+for (let letra = 0; letra <= 25; letra++) {
     console.log("I know");
 }
 
-let numVezes = 1
-while(numVezes <= 26){
-    console.log("I know" + numVezes)
-numVezes++
+let numVezes = 1;
+while (numVezes <= 26) {
+  console.log("I know" + numVezes);
+  numVezes++;
 }
+
+const people = ['Scooby', 'Velma', "Daphne", "Shaggy", "Fred",]
+for (let maiscula = people.toUpperCase)
+    return
+
+
+function rant(message) {
+    let word = message
+    message = word.toUpperCase()
+
+    for (let i = 1; i <= 3; i++){
+        
+        console.log(word.toUpperCase())
+    }
+}
+*/
+
+function isSnakesEyes(numero1, numero2) {
+    
+    if (numero1 == numero2) {
+        console.log('Yay, snake eyes')
+    } else {
+        console.log('Nao são olhos de cobra')
+    }
+}
+isSnakesEyes(1,1)
