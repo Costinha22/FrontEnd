@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import java.util.Scanner;
@@ -69,38 +70,39 @@ public class gamestart {
             }
 
 
-
-    // Método para o Menu Utilizador
-            private static void menuUtilizador(Scanner scanner) {
+        // Método para o Menu Utilizador
+        public static void menuUtilizador () throws FileNotFoundException{
+            Scanner inputUtilizador = new Scanner(System.in){
+           String opcao="";
             do {
-            System.out.println("\nMenu Utilizador:");
-            System.out.println("1. Visualizar Perfil");
-            System.out.println("2. Alterar Senha");
-            System.out.println("3. Consultar Histórico");
-            System.out.println("4. Voltar ao Menu Principal");
-            System.out.print("Escolha uma opção: ");
-            int opcaoUtilizador = scanner.nextInt();
+                System.out.println("\nMenu Utilizador:");
+                System.out.println("1. Visualizar Perfil");
+                System.out.println("2. Alterar Senha");
+                System.out.println("3. Consultar Histórico");
+                System.out.println("4. Voltar ao Menu Principal");
+                System.out.print("Escolha uma opção: ");
+                int opcaoUtilizador = scanner.nextInt();
 
-            switch (opcaoUtilizador) {
-                case 1:
-                    System.out.println("Opção 'Visualizar Perfil' escolhida.");
-                    // Adicione sua função aqui
-                    break;
-                case 2:
-                    System.out.println("Opção 'Alterar Senha' escolhida.");
-                    // Adicione sua função aqui
-                    break;
-                case 3:
-                    System.out.println("Opção 'Consultar Histórico' escolhida.");
-                    // Adicione sua função aqui
-                    break;
-                case 4:
-                    System.out.println("Voltando ao Menu Principal...");
-                    return; // Sai do menu Utilizador
-                default:
-                    System.out.println("Opção inválida. Tente novamente.");
-                    break;
+                switch (opcaoUtilizador) {
+                    case 1:
+                        System.out.println("Opção 'Visualizar Perfil' escolhida.");
+                        // Adicione sua função aqui
+                        break;
+                    case 2:
+                        System.out.println("Opção 'Alterar Senha' escolhida.");
+                        // Adicione sua função aqui
+                        break;
+                    case 3:
+                        System.out.println("Opção 'Consultar Histórico' escolhida.");
+                        // Adicione sua função aqui
+                        break;
+                    case 4:
+                        System.out.println("Voltando ao Menu Principal...");
+                        return; // Sai do menu Utilizador
+                    default:
+                        System.out.println("Opção inválida. Tente novamente.");
+                        break;
+                }
             }
         }
     }
-}
