@@ -1,3 +1,4 @@
+/*
 function calculadora(num1, num2, operacao) {
     
     switch (operacao) {
@@ -12,3 +13,5 @@ function calculadora(num1, num2, operacao) {
             if(num2 ==0)
         
 }
+            */
+
