@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container para centralizado */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilização da imagem do relógio */
+.relogio {
+    max-width: 250px; /* Define um limite máximo de largura para a imagem */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover ao passar o rato */
+    border-radius: 50%;/* arredonda as bordas da imagem do relogio */
+}
+
+/* Efeito de hover na imagem */
+.relogio:hover {
+    transform: scale(1.05); /* Aumenta um pouco a imagem ao passar o rato por cima do relogio*/
+}
+
+/* Estilização do botão */
+button {
+    padding: 15px 30px;
+    background-color: rgb(168, 87, 12);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px; /* para arredondar as bordas do botao */
+    cursor: pointer;
+}
+
+/* Efeito de hover no botão */
+button:hover {
+    background-color: #884410; /* Cor mais escura quando passa o rato no botao */
+    transform: translateY(-3px); /* faz mover um pouco o botao ao passar o rato */
+}
