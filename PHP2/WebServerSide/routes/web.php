@@ -30,4 +30,4 @@ Route::fallback(function(){
 
 Route:: get('/addusers', function(){
     return view("users.add_user");
-});
+}) -> name("add.user");

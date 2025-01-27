@@ -11,7 +11,7 @@
 <body>
     <h3>Olá aqui vais ter todos os users</h3>
  <ul>
-        <li><a href="">Todos os Users</a></li>
+  
         
     </ul>
 </body>
