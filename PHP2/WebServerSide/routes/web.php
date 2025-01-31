@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TaskController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,13 +14,8 @@ Route::get('/hello', function(){
     return '<h1>Olá Turma de Front ENd</h1>';
 })->name('hello');
 
-Route::get('/home', function(){
-    return view('view_home');
-})->name('home');
+Route::get('/home',[HomeController::class, 'returnViewHome'] )->name('home');
 
-Route::get('/users', function(){
-    return view('users.all_users');
-})->name('users.all');
 
 
 Route::get('/hello/{name}', function($name){
@@ -28,6 +26,9 @@ Route::fallback(function(){
     return "<h1>Não fujas, volta <a href=".route('hello')." >aqui</a></h1>";
 });
 
-Route:: get('/addusers', function(){
-    return view("users.add_user");
-}) -> name("add.user");
+//rotas de users
+Route:: get('/addusers',[UserController::class, 'returnAllUsersAdded'] ) -> name("add.user");
+Route::get('/users',[UserController::class, 'returnAllUsersView'] )->name('users.all');
+
+//rota tarefas
+Route:: get('/tasks',[TaskController::class, 'getMyTasks'])->name('tasks');

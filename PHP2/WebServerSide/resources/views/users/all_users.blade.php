@@ -8,12 +8,25 @@
     <title>Document</title>
 </head>
 
-<body>
-    <h3>Olá aqui vais ter todos os users</h3>
- <ul>
-  
+
+    
+<h3>Olá aqui vais ter todos os users</h3>
+    <h6>Olá {{$myName}}</h6>
+
+
+    <ul>
+        @foreach ($allUsers as $user)
+
+        <ul>
+    <li>ID: {{$user['id']}}</li>
+    <li>Nome: {{$user['name']}}</li>
+    <li>Email: {{$user['email']}}</li>
+</ul>
         
-    </ul>
-</body>
+        @endforeach
+
+ <li><a href="{{route('users.all')}}">Todos os users</a></li>
+</ul>
+
 
 </html>
