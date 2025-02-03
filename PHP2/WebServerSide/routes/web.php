@@ -29,6 +29,9 @@ Route::fallback(function(){
 //rotas de users
 Route:: get('/addusers',[UserController::class, 'returnAllUsersAdded'] ) -> name("add.user");
 Route::get('/users',[UserController::class, 'returnAllUsersView'] )->name('users.all');
+Route::get('/insert-user-db',[UserController::class, 'insertUserIntoDB']);
+Route::get('/update-user-db', [UserController::class, 'updateUserIntoDB']);
+Route::get('/delete-user-db',[UserController::class,'deleteUserFromDB']);
 
 //rota tarefas
 Route:: get('/tasks',[TaskController::class, 'getMyTasks'])->name('tasks');

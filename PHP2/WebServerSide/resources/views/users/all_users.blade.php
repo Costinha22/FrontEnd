@@ -1,32 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-
-    
-<h3>Olá aqui vais ter todos os users</h3>
-    <h6>Olá {{$myName}}</h6>
-
-
-    <ul>
-        @foreach ($allUsers as $user)
-
-        <ul>
-    <li>ID: {{$user['id']}}</li>
-    <li>Nome: {{$user['name']}}</li>
-    <li>Email: {{$user['email']}}</li>
+@extends('layouts.fe_layout')
+ 
+   @section('content')
+ 
+ 
+   <h1>Todos os Users</h1>
+ 
+  
+ 
+   <h6>Olá {{$myName}}</h6>
+ 
+ 
+<ul>
+    @foreach ($allUsers as $user)
+    <li> {{$user['id'] }} - {{ $user['name'] }} : {{$user['email']}}
+ 
+    </li>
+    @endforeach
+ 
 </ul>
-        
-        @endforeach
+<h3>Users vindos da BD</h3>
+ 
+<table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Morada</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
 
- <li><a href="{{route('users.all')}}">Todos os users</a></li>
-</ul>
-
-
-</html>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($usersFromDB as $user)
+                <tr>
+                    <th scope="row">{{ $user->id }}</th>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->address }}</td>
+                     <td><a href="" class="btn btn-info">Ver</a></td>
+                     <td><a href="" class="btn btn-danger">Apagar</a></td>
+                </tr>
+            @endforeach
+ 
+    </table>
+ 
+   @endsection

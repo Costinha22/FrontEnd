@@ -14,5 +14,26 @@
         <li>{{$individualTask}} </li>
         @endforeach
     </ul>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Status</th>
+                <th scope="col">Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($tasksFromDB as $tasks)
+                <tr>
+                    <th scope="row">{{ $tasks->id }}</th>
+                    <td>{{ $tasks->user_name }}</td>
+                    <td>{{ $tasks->status }}</td>
+                    <td>{{ $tasks->due_dat }}</td>
+                </tr>
+            @endforeach
+ 
+    </table>
  
 @endsection

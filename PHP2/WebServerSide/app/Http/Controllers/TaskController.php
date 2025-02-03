@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TaskController extends Controller
 {
@@ -14,9 +15,22 @@ class TaskController extends Controller
         ];
 
         $availableTasks=['sql', 'js', 'Java', 'POO'];
+        $tasksFromDB=$this->getAllTasks();
 
-         return view('tasks.tasks', compact ('tasks', 'availableTasks'));
+         return view('tasks.tasks', compact ('tasks', 'availableTasks', 'tasksFromDB'));
     }
     
-}
+    private function getAllTasks(){
+        $tasksFromDB = 
+        DB::table('tasks')
+        ->join ('users', 'users.id','=','tasks.user_id')
+        ->select('tasks.*','users.name as user_name')
+        ->get();
+        
+
+        return $tasksFromDB;
+    }
+ 
+
+ }
 
