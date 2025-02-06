@@ -8,3 +8,4 @@ function alerta() {
 }
 
 botao1.addEventListener("click", alerta);
+
