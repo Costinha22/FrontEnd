@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -66,6 +68,43 @@ public function deleteUserFromDB (){
 return response()->json('user apagado com sucesso');
   }
 
+  public function deleteUser($id){
+        DB::table('tasks')
+        ->where('user_id', $id)
+        ->delete();
+ 
+ 
+        DB::table('users')
+        ->where('id', $id)
+        ->delete();
+ 
+        return back();
+    }
+
+    public function viewUser($id){
+      $ourUser = DB::table ('users')
+      ->where ('id',$id)
+      ->first ();
+      return view ('users.view_user', compact ('ourUser'));
+    }
+
+   
+public function createUser(Request $request){
+        $request->validate([
+            'name'=> 'required|string|max:50',
+            'email'=> 'required|email|unique:users',
+            'password' =>'required|min:8'
+        ]);
+ 
+        User::insert([
+            'name' => $request->name,
+            'email' =>$request->email,
+            'password' =>Hash::make($request->password),
+        ]);
+ 
+        return redirect()->route('users.all')->with('message', 'Utilizador adicionado com sucesso!');
+ 
+    }
 private function getUsersFromDB(){
   $usersFromDB = 
   DB::table('users')
@@ -75,4 +114,5 @@ private function getUsersFromDB(){
   }
 
 }
+
 

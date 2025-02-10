@@ -31,6 +31,9 @@
                     <td>{{ $tasks->user_name }}</td>
                     <td>{{ $tasks->status }}</td>
                     <td>{{ $tasks->due_dat }}</td>
+                     <td>{{ $tasks->description }}</td>
+                    <td><a href="{{route('view.tasks',  $tasks->id)}}" class="btn btn-info">Ver</a></td>
+                    <td><a href="" class="btn btn-danger">Apagar</a></td>
                 </tr>
             @endforeach
  

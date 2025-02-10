@@ -32,6 +32,14 @@ Route::get('/users',[UserController::class, 'returnAllUsersView'] )->name('users
 Route::get('/insert-user-db',[UserController::class, 'insertUserIntoDB']);
 Route::get('/update-user-db', [UserController::class, 'updateUserIntoDB']);
 Route::get('/delete-user-db',[UserController::class,'deleteUserFromDB']);
-
+Route::get('/delete-user/{id}', [UserController::class, 'deleteUser'])->name('users.delete');
+Route::get('/view-user/{id}', [UserController::class, 'viewUser'])->name('users.view');
+Route::post('/create-users', [UserController::class, 'createUser'])->name('users.create');
 //rota tarefas
 Route:: get('/tasks',[TaskController::class, 'getMyTasks'])->name('tasks');
+Route::get('/view-tasks/{id}', [TaskController::class, 'viewTasks'])->name('view.tasks');
+Route::get('/delete-task/{id}', [TaskController::class, 'deleteTask'])->name('tasks.delete');
+Route::get('/add-tasks',[TaskController::class, 'returnAllTasksAdded'])->name('add.tasks');
+Route::post('/create-tasks', [TaskController::class, 'createTask'])->name('tasks.create');
+
+
