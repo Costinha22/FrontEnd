@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesae Digital - Seu Futuro Começa Aqui</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Cesae Digital</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#sobre">Sobre Nós <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cursos">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="sobre" class="container my-5">
+        <h2>Sobre Nós</h2>
+        <p>O Cesae Digital é um centro de formação que visa o desenvolvimento de competências digitais. O Cesae
+            Digital é um centro de formação acreditado pela DGERT, que visa o desenvolvimento de competências
+            digitais.
+            A nossa oferta formativa é abrangente e inovadora, e inclui cursos em áreas como:</p>
+        <ul>
+            <li>Programação</li>
+            <li>Marketing Digital</li>
+            <li>Data Science</li>
+            <li>Cibersegurança</li>
+        </ul>
+        <p>Acreditamos que a educação é a chave para o sucesso, e por isso estamos empenhados em fornecer aos nossos
+            alunos as ferramentas e os conhecimentos necessários para prosperar na era digital.</p>
+    </section>
+
+    <section id="cursos" class="container my-5">
+        <h2>Cursos</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/269562519/original/6a385a175ddbec3906a4710dd2e35befc7081f8b/provide-turn-key-software-development-services.png"
+                        class="card-img-top" alt="Curso de Software Developer">
+                    <div class="card-body">
+                        <h5 class="card-title">Software Developer</h5>
+                        <p class="card-text">Aprenda a desenvolver aplicações web e mobile.</p>
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://cdn.create.vista.com/api/media/small/239283876/stock-photo-programmer-working-software-development-coding-technologies-website-design-technology-concept"
+                        class="card-img-top" alt="Curso de Web Developer">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Developer</h5>
+                        <p class="card-text">Crie sites e aplicações web modernas e interativas.</p>
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/045/782/238/small_2x/a-woman-in-glasses-smiles-at-a-computer-monitor-in-a-room-photo.jpg"
+                        class="card-img-top" alt="Curso de Front-End Developer">
+                    <div class="card-body">
+                        <h5 class="card-title">Front-End Developer</h5>
+                        <p class="card-text">Domine as tecnologias front-end e crie interfaces incríveis.</p>
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://www.cesaedigital.pt/wp-content/uploads/2023/04/logo-1024x578.png"
+                        class="card-img-top" alt="Curso Girls Can Code!">
+                    <div class="card-body">
+                        <h5 class="card-title">Girls Can Code!</h5>
+                        <p class="card-text">Empodere mulheres na área da tecnologia.</p>
+                        <a href="#" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="container my-5">
+        <h2>Contato</h2>
+        <form id="formulario-contato">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="contato">Contato:</label>
+                <input type="tel" class="form-control" id="contatoFormulario">
+            </div>
+            <div class="form-group">
+                <label for="regiao">Escola:</label>
+                <select class="form-control" id="regiao">
+                    <option value="">Selecione a sua escola</option>
+                    <option value="norte">Norte - Porto</option>
+                    <option value="norte">Norte - São João da Madeira</option>
+                    <option value="centro">Centro - Lisboa</option>
+                    <option value="sul">Sul - Em breve</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea class="form-control" id="mensagem" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="bg-dark py-3">
+        <div class="container">
+            <p class="text-center">&copy; 2023 Cesae Digital</p>
+            <p class="text-center">Rua Ciríaco Cardoso 186, 4150-212 Porto</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
