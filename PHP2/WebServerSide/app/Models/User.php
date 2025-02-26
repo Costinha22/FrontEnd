@@ -12,6 +12,11 @@ class User extends Authenticatable
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
+    CONST USER_ADMIN = 1;
+    CONST USER_STUDENT = 2;
+    CONST USER_TEACHER = 3;
+
+
     /**
      * The attributes that are mass assignable.
      *

@@ -6,19 +6,17 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
- public function returnViewHome(){
-    $myVar = 'Hello World';
-   
-    $myName ='Joao';
+    public function returnViewHome(){
+        $myVar = 'Hello World';
+        $myName = 'Sara';
 
-    $shoppingList =['batatas', 'feijoes','chocolate'];
-    $contactInfo = [
-        'name'=>'Joao',
-        'email'=>'joaocosta.fed@gmail.com'
-    ];
+        $shoppingList = ['batatas', 'feijões', 'chocolate'];
 
-    
-    
-    return view('view_home', compact ('myVar', 'myName','shoppingList','contactInfo'));
+        $contactInfo= [
+            'name'=>'Sara',
+            'email' =>'Sara@gmail.com'
+        ];
+
+        return view('view_home', compact('myVar', 'myName', 'shoppingList', 'contactInfo'));
     }
 }

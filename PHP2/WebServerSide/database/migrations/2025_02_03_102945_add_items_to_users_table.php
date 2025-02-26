@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('address')->after('email')->default('rua das amoras');
+            $table->string('address')->after('email')->default('rua da pessoa que ainda não tinha morada');
             $table->string('nif')->nullable()->after('address');
-            
         });
     }
 

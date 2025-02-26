@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description')->nullable;
-            $table->date('due_dat')->nullable;
-            $table->boolean('status')->nullable;
+            $table->text('description')->nullable();
+            $table->date('due_at')->nullable();
+            $table->boolean('status')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

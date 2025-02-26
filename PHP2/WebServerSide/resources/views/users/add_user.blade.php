@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    @extends ('layouts.fe_layout')
-    @section('content')
+@extends('layouts.fe_layout')
+@section('content')
     <h5>Olá, aqui podes adicionar users</h5>
     <form method="POST" action="{{ route('users.create') }}">
         @csrf
@@ -36,6 +30,3 @@
         <button type="submit" class="btn btn-primary">Inserir</button>
     </form>
 @endsection
- 
-</body>
-</html>

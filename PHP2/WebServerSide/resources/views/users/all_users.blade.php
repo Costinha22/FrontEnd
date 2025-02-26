@@ -1,27 +1,20 @@
 @extends('layouts.fe_layout')
- 
 @section('content')
- 
-    @if(session('message'))
+    @if (session('message'))
         <div class="alert alert-success">
-            {{session('message')}}
+            {{ session('message') }}
         </div>
     @endif
- 
-    <h1>Todos os Users</h1>
- 
-    
- 
-    <h6>Olá {{$myName}}</h6>
- 
+
+    <h3>Olá aqui vais ter todos os users em dummy content sem ser da Base de Dados</h3>
+    <h6>olá {{ $myName }}</h6>
     <ul>
         @foreach ($allUsers as $user)
-            <li> {{$user['id'] }} - {{ $user['name'] }} : {{$user['email']}} </li>
+            <li>{{ $user['id'] }} - {{ $user['name'] }} : {{ $user['email'] }} </li>
         @endforeach
     </ul>
- 
+
     <h3>Users vindos da BD</h3>
- 
     <table class="table">
         <thead>
             <tr>
@@ -44,8 +37,6 @@
                     <td><a href="{{ route('users.delete', $user->id) }}" class="btn btn-danger">Apagar</a></td>
                 </tr>
             @endforeach
-        </tbody>
+
     </table>
- 
 @endsection
- 
