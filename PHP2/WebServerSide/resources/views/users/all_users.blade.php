@@ -1,32 +1,28 @@
-    @extends('layouts.fe_layout')
-    @section('content')
-
-
-   @if(session('message'))
-        <div> class="alert alert-success">
-            {{session(message)}}
-   @endif
+@extends('layouts.fe_layout')
  
+@section('content')
  
-   
-   <h1>Todos os Users</h1>
+    @if(session('message'))
+        <div class="alert alert-success">
+            {{session('message')}}
+        </div>
+    @endif
  
-  
+    <h1>Todos os Users</h1>
  
-   <h6>Olá {{$myName}}</h6>
+    
  
+    <h6>Olá {{$myName}}</h6>
  
-<ul>
-    @foreach ($allUsers as $user)
-    <li> {{$user['id'] }} - {{ $user['name'] }} : {{$user['email']}}
+    <ul>
+        @foreach ($allUsers as $user)
+            <li> {{$user['id'] }} - {{ $user['name'] }} : {{$user['email']}} </li>
+        @endforeach
+    </ul>
  
-    </li>
-    @endforeach
+    <h3>Users vindos da BD</h3>
  
-</ul>
-<h3>Users vindos da BD</h3>
- 
-<table class="table">
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -35,7 +31,6 @@
                 <th scope="col">Morada</th>
                 <th scope="col"></th>
                 <th scope="col"></th>
-
             </tr>
         </thead>
         <tbody>
@@ -45,11 +40,12 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->address }}</td>
-                     <td><a href="{{route('users.view',$user->id)}}" class="btn btn-info">Ver</a></td>
-                    <td><a href="{{route('users.delete', $user->id )}}" class="btn btn-danger">Apagar</a></td>
+                    <td><a href="{{ route('users.view', $user->id) }}" class="btn btn-info">Ver / Editar</a></td>
+                    <td><a href="{{ route('users.delete', $user->id) }}" class="btn btn-danger">Apagar</a></td>
                 </tr>
             @endforeach
- 
+        </tbody>
     </table>
  
-   @endsection
+@endsection
+ 

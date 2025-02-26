@@ -35,6 +35,7 @@ Route::get('/delete-user-db',[UserController::class,'deleteUserFromDB']);
 Route::get('/delete-user/{id}', [UserController::class, 'deleteUser'])->name('users.delete');
 Route::get('/view-user/{id}', [UserController::class, 'viewUser'])->name('users.view');
 Route::post('/create-users', [UserController::class, 'createUser'])->name('users.create');
+Route::post('update-users', [UserController::class,'updateUser'])->name('users.update');
 //rota tarefas
 Route:: get('/tasks',[TaskController::class, 'getMyTasks'])->name('tasks');
 Route::get('/view-tasks/{id}', [TaskController::class, 'viewTasks'])->name('view.tasks');

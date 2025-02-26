@@ -88,6 +88,23 @@ return response()->json('user apagado com sucesso');
       return view ('users.view_user', compact ('ourUser'));
     }
 
+     public function updateUser(Request $request){
+        $request->validate([
+             'name' => 'required'
+            ]);
+ 
+ 
+        Db::table('users')->where('id', $request->id)
+        ->update([
+            'name' =>$request->name,
+            'address' =>$request->address,
+            'nif' =>$request->nif,
+            'updated_at' => now(),
+        ]);
+ 
+        return redirect()->route('users.all')->with('message', 'Utilizador actualizado com sucesso!');
+ 
+    }
    
 public function createUser(Request $request){
         $request->validate([
