@@ -133,5 +133,9 @@ Your requirements could not be resolved to an installable set of packages.
 
 Solução -> composer update --ignore-platform-reqs 
 
+Filament Solutions:
+
+->Ficheiro ENV ----> mudar o SESSION_DRIVER=database para SESSION_DRIVER=file
+
 
 
