@@ -35,8 +35,34 @@
                         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
-            </div>
+            </div>   
         </div>
+      @if (Route::has('login'))
+                        <nav class="-mx-3 flex flex-1 justify-end">
+                            @auth
+                                <a href="{{ url('/dashboard') }}"
+                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                    Dashboard
+                                </a>
+                               <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button  type="submit">Logout</button>
+                    </form>
+                            @else
+                                <a href="{{ route('login') }}"
+                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                    Log in
+                                </a>
+
+                                @if (Route::has('users.add'))
+                                    <a href="{{ route('users.add') }}"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                                        Register
+                                    </a>
+                                @endif
+                            @endauth
+                        </nav>
+                    @endif
     </nav>
 
     <div class="container">

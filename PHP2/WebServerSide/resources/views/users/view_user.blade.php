@@ -1,7 +1,7 @@
 @extends('layouts.fe_layout')
 @section('content')
     <h6>Utilizador: {{ $ourUser->name }}</h6>
-    <form method="POST" action="{{ route('users.update') }}">
+    <form method="POST" action="{{ route('users.update') }}> "enctype=" multipart/form-data">
         @csrf
         <input type="hidden" name="id" value="{{ $ourUser->id }}">
         <div class="mb-3">
@@ -27,7 +27,9 @@
             @enderror
         </div>
 
-
+ <div class="mb-2">
+            <input type="file" name="photo" id="">
+        </div>
 
         <button type="submit" class="btn btn-primary">Actualizar</button>
     </form>

@@ -68,7 +68,7 @@ class UserController extends Controller
     }
 
     public function createUser(Request $request){
-        $request->validate([
+            $request->validate([
             'name'=> 'required|string|max:50',
             'email'=> 'required|email|unique:users',
             'password' =>'required|min:8'
